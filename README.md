@@ -13,4 +13,10 @@ open source firewall using scapy include CLI interface and web interface and (ip
  
  -packet_captureing
 
- install  python and scapy and flask  before run 
+
+Requirements before run the code 
+
+---this setup runs on VMware need 3 vm to work and 2 client and a main server(firewall) firewall vm needs 2 additional adapters for  different networks 
+
+
+---Install Python and scapy and Flask  before run 
