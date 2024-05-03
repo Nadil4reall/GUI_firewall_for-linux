@@ -13,4 +13,4 @@ open source firewall using scapy include CLI interface and web interface and (ip
  
  -packet_captureing
 
- install  python before run that it  
+ install  python and scapy  before run 
