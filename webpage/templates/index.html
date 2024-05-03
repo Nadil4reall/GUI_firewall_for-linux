@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firewall Configuration</title>
+</head>
+<body>
+    <h1>Firewall Configuration</h1>
+    <form action="/configure" method="post">
+        <label for="option">Select Option:</label>
+        <select name="option" id="option">
+            <option value="start_capture">Start Traffic Capture</option>
+            <option value="stop_capture">Stop Traffic Capture</option>
+            <option value="enable_syn_flood">Enable SYN Flood Protection</option>
+            <option value="disable_syn_flood">Disable SYN Flood Protection</option>
+            <option value="limit_ssh_access">Limit SSH Access</option>
+            <option value="disable_ssh_access">Disable SSH Access Limitation</option>
+            <option value="prevent_dos_attacks">Prevent DoS Attacks</option>
+            <option value="prevent_port_scanning">Prevent Port Scanning</option>
+            <option value="block_protocol">Block Protocol</option>
+            <option value="unblock_protocol">Unblock Protocol</option>
+            <option value="block_port">Block Port</option>
+            <option value="unblock_port">Unblock Port</option>
+            <option value="block_ip">Block IP Address</option>
+            <option value="unblock_ip">Unblock IP Address</option>
+            <!-- Add more options here if needed -->
+        </select>
+        <br><br>
+        <label for="interface">Select Interface:</label>
+        <select name="interface" id="interface">
+            {% for interface in interfaces %}
+            <option value="{{ interface }}">{{ interface }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <!-- Add input fields for additional options if needed -->
+        <input type="text" name="ssh_ip" placeholder="SSH IP Address">
+        <input type="text" name="protocol" placeholder="Protocol">
+        <input type="text" name="port" placeholder="Port">
+        <input type="text" name="ip_address" placeholder="IP Address">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
